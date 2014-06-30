@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run  -d nicescale/memcached
+docker run -d --env-file="memcached.cfg" nicescale/memcached
