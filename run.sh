@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
-docker run -d nicescale/memcached
+. /etc/memcached/memcached.cfg &&
+exec memcached -p $port -m $mlimit $allowlru -u $user -P $pidfile
