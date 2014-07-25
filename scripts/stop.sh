@@ -10,4 +10,8 @@ get_sid() {
 
 sid=`get_sid`
 
-docker kill $sid
+if docker top $sid > /dev/null; then
+  docker kill $sid
+else
+  echo service $sid no run.
+fi
