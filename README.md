@@ -19,3 +19,4 @@ Configuration
 Edit memcached.cfg, modify memory or other, then:
 
   docker run -d -p 11211:11211 -v $HOME/memcached.cfg:/etc/memcached/memcached.cfg nicescale/memcached
+
