@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
-. /etc/memcached/memcached.cfg 
+. /etc/memcached/memcached.cfg
 if [ "$allowlru" = "true" ]; then
-  $allowlru="-M"
+  allowlru=
 else
-  $allowlru=
+  allowlru="-M"
 fi
 exec memcached -p $port -m $mlimit $allowlru -u $user -P $pidfile
